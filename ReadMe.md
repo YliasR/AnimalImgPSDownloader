@@ -1,0 +1,1 @@
+A bunch of PowerShell scripts that downloads pictures of certain animals and places those pictures in a designated folder in the users pictures folder.
