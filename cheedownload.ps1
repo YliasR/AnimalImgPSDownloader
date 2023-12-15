@@ -5,9 +5,11 @@ $destinationFolder = Join-Path -Path $env:USERPROFILE\Pictures -ChildPath "cheet
 if (-not (Test-Path -Path $destinationFolder)) {
     New-Item -ItemType Directory -Path $destinationFolder | Out-Null
 }
+# Ask the user for the number of images to download
+$numberOfImages = Read-Host "Enter the number of images you want to download"
 
-# Loop 10 times
-for ($i = 1; $i -le 10; $i++) {
+# Loop based on the user input
+for ($i = 1; $i -le $numberOfImages; $i++) {
     $timestamp = Get-Date -Format "yyyyMMddHHmmss"
     $destinationPath = Join-Path -Path $destinationFolder -ChildPath "chee_image_${i}_${timestamp}.jpg"
     # Download the image and save it to the destination path

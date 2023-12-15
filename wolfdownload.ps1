@@ -6,8 +6,11 @@ if (-not (Test-Path -Path $destinationFolder)) {
     New-Item -ItemType Directory -Path $destinationFolder | Out-Null
 }
 
-# Loop 10 times
-for ($i = 1; $i -le 10; $i++) {
+# Ask the user for the number of images to download
+$numberOfImages = Read-Host "Enter the number of images you want to download"
+
+# Loop based on the user input
+for ($i = 1; $i -le $numberOfImages; $i++) {
     $timestamp = Get-Date -Format "yyyyMMddHHmmss"
     $destinationPath = Join-Path -Path $destinationFolder -ChildPath "wolf_image_${i}_${timestamp}.jpg"
     # Download the image and save it to the destination path
