@@ -1,4 +1,4 @@
-A bunch of PowerShell scripts that downloads 10  pictures per run of certain animals and places those pictures in a designated folder in the users pictures folder.
+A bunch of PowerShell scripts that downloads pictures of certain animals and places those pictures in a designated folder in the users pictures folder.
 
 
 Currently available animals:
